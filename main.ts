@@ -11,7 +11,7 @@ const bidBlock: string = "3904000:3904003:3904006:3904042";
 
 /**
  * Creates a sorted list of Browser Impersonator Detection (BID) rules starting with '3904' from a string of firewall rules.
- * @param bids A string containing firwallrules separated by colon (':').
+ * @param bids A string containing firewall rules, separated by a colon (':').
  * @returns An array of only the bid rules, starting with '3904', sorted alphabetically.
  */
 const createBidList = (bids: string) => {
@@ -33,7 +33,7 @@ export async function onClientRequest(request: EW.IngressOriginRequest) {
   const ruleIds: string = request.getVariable("PMUSER_FW_RULES");
 
   /* 
-  only take action if we FW_RULES is set. 
+  Only take action if the FW_RULES is set. 
   This should be done in delivery config not to waste time and EW calls.
   */
   if (ruleIds !== undefined) {
@@ -48,7 +48,7 @@ export async function onClientRequest(request: EW.IngressOriginRequest) {
         "Denied Response"
       );
     } else {
-      request.setHeader("x-ew-bid-hit", "false");
+      request.setHeader("x-ew-bidblock-hit", "false");
     }
   }
 }
