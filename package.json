@@ -1,7 +1,7 @@
 {
   "name": "ew-bot",
-  "version": "0.0.6",
-  "description": "responsed with a certain HTTP code in case some specific bot rules are triggered.",
+  "version": "0.0.14",
+  "description": "respond with a certain HTTP code in case some specific bot rules are triggered.",
   "main": "index.js",
   "config": {
     "ewid": "84518",
