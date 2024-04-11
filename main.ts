@@ -17,7 +17,8 @@ const bidMatchResponse = {
   statusText: "Denied Response",
 };
 
-// unpack our response so it can be feed into responseWith
+// unpack our response so it can be feed into responseWith()
+// https://techdocs.akamai.com/edgeworkers/docs/request-object#respondwith
 const { status, headers, body, statusText } = bidMatchResponse;
 
 /**
