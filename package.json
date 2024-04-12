@@ -1,6 +1,6 @@
 {
   "name": "ew-bot",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "respond with a certain HTTP code in case some specific bot rules are triggered.",
   "main": "index.js",
   "config": {
